@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script language="JavaScript" type="text/javascript" src="functions.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="JavaScript" type="text/javascript" src="js/functions.js"></script>
     <title>Cadastro Pessoal</title>
 </head>
 <body>
-    <h1>Cadastro Pessoal</h1>
+    <header>
+        <img src="images/logo_main.PNG">
+        <h1>Cadastro Pessoal</h1>
+    </header>
     <form name="form1">
 
         <label for="nome">Nome:</label>
@@ -56,15 +60,19 @@
         <br>
 
         <label for="telefone">Telefone:</label>
-        <input type="text" name="telefone" id="telefone" class="input100" placeholder="(99) 99999-9999" onkeyup="javascript: MascaraTelefone(form1.telefone);" maxlength="14">
+        <input type="text" name="telefone" id="telefone" class="input100" placeholder="(99) 9999-9999" onkeyup="javascript: MascaraTelefone(form1.telefone);" maxlength="14">
         <br>
 
         <label for="celular">Celular:</label>
-        <input type="text" id="celular" name="celular" class="input100" placeholder="(99) 99999-999" required="required" onkeyup="javascript: MascaraCelular(form1.celular);" maxlength="15">*
+        <input type="text" id="celular" name="celular" class="input100" placeholder="(99) 99999-9999" required="required" onkeyup="javascript: MascaraCelular(form1.celular);" maxlength="15">*
         <br>
         
         <p>Os campos marcados com * são obrigatórios.</p>
         <input type="submit" name="enviar" value="Enviar" class="enviar" onclick="javascript:Enviar();">
+        
     </form>
+    <footer>
+        <img src="images/rodape.png">
+    </footer>
 </body>
 </html>

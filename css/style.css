@@ -11,7 +11,7 @@ form {
 
 h1 {
     margin-bottom: 30px;
-    margin-left: 100px;
+    margin-left: 350px;
     color: black;
     text-shadow: 5px 5px 5px black;
 }
@@ -35,9 +35,8 @@ input, select {
 
 input:hover, input:focus, select:hover, select:focus {
     border-color: #000066;
-    background-color: #66FFFF;
+    background-color:#debe67;
     color: black;
-    font-weight: bold;
 }
 
 .enviar {
@@ -45,11 +44,13 @@ input:hover, input:focus, select:hover, select:focus {
     width: 100px;
     border: 1px solid;
     color: black;
-    margin-left: 130px;
+    margin-left: 350px;
+    margin-bottom: 20px;
+    background-color:#debe67;
 }
 
 label {
-    margin-left: 20px;
+    margin-left: 250px;
     color: black;
     font-weight: bold;
     display: inline-block;
@@ -60,5 +61,5 @@ p {
     font-family: Verdana,Tahoma,sans-serif;
     font-size: 10px;
     color: darkred;
-    margin-left: 20px;
+    margin-left: 250px;
 }
