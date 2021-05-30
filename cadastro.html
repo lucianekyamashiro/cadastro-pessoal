@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script language="JavaScript" type="text/javascript" src="functions.js"></script>
+    <title>Cadastro Pessoal</title>
+</head>
+<body>
+    <h1>Cadastro Pessoal</h1>
+    <form name="form1">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Informe seu nome" required="required" />*
+        <br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="999.999.999-99" required="required" onkeyup="javascript: MascaraCPF(form1.cpf);" maxlength="14">*
+        <br>
+
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" placeholder="Informe seu RG">
+        <br>
+
+        <label for="rg">Sexo:</label>
+        <select name="sexo">
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+        </select>
+        <br>
+
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" placeholder="99999-999" onkeyup="javascript: MascaraCep(form1.cep);" maxlength="9">
+        <br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Informe o seu endereço" required="required">*
+        <br>
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero" placeholder="Informe o numero do endereco" required="required">*
+        <br>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" name="bairro" placeholder="Informe o bairro">
+        <br>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" placeholder="Informe a cidade">
+        <br>
+
+        <label for="estado">Estado:</label>
+        <input type="text" name="estado" placeholder="Informe o estado">
+        <br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" id="telefone" placeholder="(99) 99999-9999" onkeyup="javascript: MascaraTelefone(form1.telefone);" maxlength="14">
+        <br>
+
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="celular" placeholder="(99) 99999-999" required="required" onkeyup="javascript: MascaraCelular(form1.celular);" maxlength="15">*
+        <br>
+        
+        <p>Os campos marcados com * são obrigatórios.</p>
+        <input type="submit" name="enviar" value="Enviar" class="enviar" onclick="javascript:Enviar();">
+    </form>
+</body>
+</html>
