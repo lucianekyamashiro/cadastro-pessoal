@@ -6,7 +6,7 @@ function Enviar() {
         document.getElementById("numero").value == "" ||
         document.getElementById("celular").value == "") 
         {
-            alert("Favor preencher os campos obrigatórios");
+            alert("Favor preencher os campos obrigatórios.");
             return false;
     }
     else{
