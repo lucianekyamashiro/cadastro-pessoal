@@ -21,7 +21,7 @@
         <br>
 
         <label for="cpf">CPF:</label>
-        <input type="text" name="cpf" id="cpf" class="input100" placeholder="999.999.999-99" required="required" onkeyup="javascript: MascaraCPF(form1.cpf);" maxlength="14">*
+        <input type="text" name="cpf" id="cpf" class="input100" placeholder="999.999.999-99" required="required" onkeypress="return MascaraCPF(event);" maxlength="14">*
         <br>
 
         <label for="rg">RG:</label>
@@ -30,13 +30,14 @@
 
         <label for="rg">Sexo:</label>
         <select name="sexo">
+            <option value="">Selecione</option>
             <option value="F">Feminino</option>
             <option value="M">Masculino</option>
         </select>
         <br>
 
         <label for="cep">CEP:</label>
-        <input type="text" name="cep" class="input100" placeholder="99999-999" onkeyup="javascript: MascaraCep(form1.cep);" maxlength="9">
+        <input type="text" name="cep" id="cep" class="input100" placeholder="99999-999" onkeypress="return MascaraCep(event);" maxlength="9">
         <br>
 
         <label for="endereco">Endereço:</label>
@@ -51,20 +52,49 @@
         <input type="text" name="bairro" class="input300" placeholder="Informe o bairro">
         <br>
 
+        <label for="estado">Estado:</label>
+        <select>
+            <option value="">Selecione</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espirito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+        <br>
+
         <label for="cidade">Cidade:</label>
         <input type="text" name="cidade" placeholder="Informe a cidade">
         <br>
 
-        <label for="estado">Estado:</label>
-        <input type="text" name="estado" placeholder="Informe o estado">
-        <br>
-
         <label for="telefone">Telefone:</label>
-        <input type="text" name="telefone" id="telefone" class="input100" placeholder="(99) 9999-9999" onkeyup="javascript: MascaraTelefone(form1.telefone);" maxlength="14">
+        <input type="text" name="telefone" id="telefone" class="input100" placeholder="(99) 9999-9999" onkeypress="return MascaraTelefone(event);" maxlength="14">
         <br>
 
         <label for="celular">Celular:</label>
-        <input type="text" id="celular" name="celular" class="input100" placeholder="(99) 99999-9999" required="required" onkeyup="javascript: MascaraCelular(form1.celular);" maxlength="15">*
+        <input type="text" id="celular" name="celular" class="input100" placeholder="(99) 99999-9999" required="required" onkeypress="return MascaraCelular(event);" maxlength="15">*
         <br>
         
         <p>Os campos marcados com * são obrigatórios.</p>

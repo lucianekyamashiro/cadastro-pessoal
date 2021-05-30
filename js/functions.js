@@ -16,36 +16,48 @@ function Enviar() {
 }
 
 //adiciona mascara de cep
-function MascaraCep(cep){
-            if(mascaraInteiro(cep)==false){
-            //event.returnValue = false;
-            return false;
+function MascaraCep(e){
+        if(somenteNumeros(e)==false){
+                return false;
     }       
-    return formataCampo(cep, '00000-000', event);
+    return formataCampo('cep', '00000-000', e);
 }
 
 //adiciona mascara ao telefone
-function MascaraTelefone(tel){  
-    if(mascaraInteiro(tel)==false){
-            event.returnValue = false;
+function MascaraTelefone(e){  
+        if(somenteNumeros(e)==false){
+                return false;
     }       
-    return formataCampo(tel, '(00) 0000-0000', event);
+    return formataCampo('telefone', '(00) 0000-0000', e);
 }
 
 //adiciona mascara ao celular
-function MascaraCelular(cel){  
-    if(mascaraInteiro(cel)==false){
-            event.returnValue = false;
+function MascaraCelular(e){  
+        if(somenteNumeros(e)==false){
+                return false;
     }       
-    return formataCampo(cel, '(00) 00000-0000', event);
+    return formataCampo('celular', '(00) 00000-0000', e);
 }
 
 //adiciona mascara ao CPF
-function MascaraCPF(cpf){
-    if(mascaraInteiro(cpf)==false){
-            event.returnValue = false;
+function MascaraCPF(e){
+    if(somenteNumeros(e)==false){
+        return false;
     }       
-    return formataCampo(cpf, '000.000.000-00', event);
+    return formataCampo('cpf', '000.000.000-00', e);
+}
+
+function somenteNumeros(e) {
+        var charCode = e.charCode ? e.charCode : e.keyCode;
+        // charCode 8 = backspace   
+        // charCode 9 = tab
+        if (charCode != 8 && charCode != 9) {
+                // charCode 48 equivale a 0   
+                // charCode 57 equivale a 9
+                if (charCode < 48 || charCode > 57) {
+                return false;
+                }
+        }
 }
 
 //valida telefone
@@ -106,7 +118,7 @@ function formataCampo(campo, Mascara, evento) {
 
     var Digitato = evento.keyCode;
     exp = /\-|\.|\/|\(|\)| /g
-    campoSoNumeros = campo.value.toString().replace( exp, "" ); 
+    campoSoNumeros = document.getElementById(campo).value.toString().replace( exp, "" ); 
 
     var posicaoCampo = 0;    
     var NovoValorCampo="";
@@ -126,7 +138,7 @@ function formataCampo(campo, Mascara, evento) {
                             posicaoCampo++; 
                       }              
               }      
-            campo.value = NovoValorCampo;
+              document.getElementById(campo).value = NovoValorCampo;
               return true; 
     }else { 
             return true; 
