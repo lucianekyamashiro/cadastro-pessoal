@@ -17,12 +17,20 @@ h1 {
 }
 
 input, select {
-    width: 300px;
+    width: 200px;
     padding: 10px;
     color: black;
     margin-left: 20px;
     margin-top: 10px;
     border: 1px solid;
+}
+
+.input300 {
+    width: 300px;
+}
+
+.input100 {
+    width: 100px;
 }
 
 input:hover, input:focus, select:hover, select:focus {
