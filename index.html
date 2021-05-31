@@ -21,7 +21,7 @@
         <br>
 
         <label for="cpf">CPF:</label>
-        <input type="text" name="cpf" id="cpf" class="input100" placeholder="999.999.999-99" required="required" onkeypress="return MascaraCPF(event);" maxlength="14">*
+        <input type="text" name="cpf" id="cpf" class="input100" placeholder="999.999.999-99" required="required" onkeypress="return MascaraCPF(event);" onblur="return ValidarCPF(this);" maxlength="14">*
         <br>
 
         <label for="rg">RG:</label>
