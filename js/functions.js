@@ -15,7 +15,8 @@ function Enviar() {
     }
 }
 
-function validarCPF() {	
+function ValidarCPF(obj) {	
+    var cpf = obj.value;
 	cpf = cpf.replace(/[^\d]+/g,'');	
 	if(cpf == '') return false;	
 	// Elimina CPFs invalidos conhecidos	
@@ -38,8 +39,10 @@ function validarCPF() {
 		rev = 11 - (add % 11);	
 		if (rev == 10 || rev == 11)		
 			rev = 0;	
-		if (rev != parseInt(cpf.charAt(9)))		
-			alert('Favor corrigir o CPF.');//return false;		
+		if (rev != parseInt(cpf.charAt(9))){
+			alert('Favor corrigir o CPF.');
+            return false;
+        }		
 	// Valida 2o digito	
 	add = 0;	
 	for (i = 0; i < 10; i ++)		
@@ -47,8 +50,10 @@ function validarCPF() {
 	rev = 11 - (add % 11);	
 	if (rev == 10 || rev == 11)	
 		rev = 0;	
-	if (rev != parseInt(cpf.charAt(10)))
-    alert('Favor corrigir o CPF.');//return false;		
+	if (rev != parseInt(cpf.charAt(10))){
+        alert('Favor corrigir o CPF.');
+        return false;
+    }		
 	return true;   
 }
 
@@ -109,28 +114,6 @@ function ValidaCep(cep){
     exp = /\d{2}\.\d{3}\-\d{3}/
     if(!exp.test(cep.value))
             alert('Numero de Cep Invalido!');               
-}
-
-//valida o CPF digitado
-function ValidarCPF(Objcpf){
-    var cpf = Objcpf.value;
-    exp = /\.|\-/g
-    cpf = cpf.toString().replace( exp, "" ); 
-    var digitoDigitado = eval(cpf.charAt(9)+cpf.charAt(10));
-    var soma1=0, soma2=0;
-    var vlr =11;
-
-    for(i=0;i<9;i++){
-            soma1+=eval(cpf.charAt(i)*(vlr-1));
-            soma2+=eval(cpf.charAt(i)*vlr);
-            vlr--;
-    }       
-    soma1 = (((soma1*10)%11)==10 ? 0:((soma1*10)%11));
-    soma2=(((soma2+(2*soma1))*10)%11);
-
-    var digitoGerado=(soma1*10)+soma2;
-    if(digitoGerado!=digitoDigitado)        
-            alert('CPF Invalido!');         
 }
 
 //valida numero inteiro com mascara
