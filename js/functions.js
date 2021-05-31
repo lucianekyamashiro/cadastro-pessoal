@@ -41,6 +41,8 @@ function ValidarCPF(obj) {
 			rev = 0;	
 		if (rev != parseInt(cpf.charAt(9))){
 			alert('Favor corrigir o CPF.');
+            obj.value = '';
+            obj.focus();
             return false;
         }		
 	// Valida 2o digito	
@@ -52,6 +54,8 @@ function ValidarCPF(obj) {
 		rev = 0;	
 	if (rev != parseInt(cpf.charAt(10))){
         alert('Favor corrigir o CPF.');
+        obj.value = '';
+        obj.focus();
         return false;
     }		
 	return true;   

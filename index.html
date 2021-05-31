@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script language="JavaScript" type="text/javascript" src="js/functions.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/cep.js"></script>
     <title>Cadastro Pessoal</title>
 </head>
 <body>
@@ -37,7 +38,7 @@
         <br>
 
         <label for="cep">CEP:</label>
-        <input type="text" name="cep" id="cep" class="input100" placeholder="99999-999" onkeypress="return MascaraCep(event);" maxlength="9">
+        <input type="text" name="cep" id="cep" class="input100" placeholder="99999-999" onkeypress="return MascaraCep(event);" onblur="pesquisacep(this.value);" maxlength="9">
         <br>
 
         <label for="endereco">Endereço:</label>
@@ -49,11 +50,11 @@
         <br>
 
         <label for="bairro">Bairro:</label>
-        <input type="text" name="bairro" class="input300" placeholder="Informe o bairro">
+        <input type="text" id="bairro" name="bairro" class="input300" placeholder="Informe o bairro">
         <br>
 
         <label for="estado">Estado:</label>
-        <select>
+        <select id="estado" name="estado">
             <option value="">Selecione</option>
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
@@ -86,7 +87,7 @@
         <br>
 
         <label for="cidade">Cidade:</label>
-        <input type="text" name="cidade" placeholder="Informe a cidade">
+        <input type="text" id="cidade" name="cidade" placeholder="Informe a cidade">
         <br>
 
         <label for="telefone">Telefone:</label>
