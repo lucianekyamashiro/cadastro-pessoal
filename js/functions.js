@@ -1,4 +1,4 @@
-//valida os campos obrigatórios do formulário
+//valida os campos obrigatórios ao clicar em enviar no formulário.
 function Enviar() {
     if (document.getElementById("nome").value == "" || 
         document.getElementById("cpf").value == "" ||
@@ -16,7 +16,7 @@ function Enviar() {
 }
 
 /*
-    Funções de validação e máscara retiradas do link https://gist.github.com/ricardodantas/6031749.
+    Funções de validação e máscara dos campos retiradas do link https://gist.github.com/ricardodantas/6031749.
 */
 function ValidarCPF(obj) {	
     var cpf = obj.value;
