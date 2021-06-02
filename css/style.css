@@ -1,65 +1,89 @@
-body {
-    padding: 0;
-    margin: 0;
-}
-
-form {
-    font-family: Verdana,Tahoma,sans-serif;
-    font-size: 15px;
-    background-color:white;
-}
-
-h1 {
-    margin-bottom: 30px;
-    margin-left: 350px;
-    color: black;
-    text-shadow: 5px 5px 5px black;
-}
-
-input, select {
-    width: 200px;
-    padding: 10px;
-    color: black;
-    margin-left: 20px;
-    margin-top: 10px;
-    border: 1px solid;
-}
-
-.input300 {
-    width: 300px;
-}
-
-.input100 {
-    width: 100px;
-}
-
-input:hover, input:focus, select:hover, select:focus {
-    border-color: #000066;
-    background-color:#debe67;
-    color: black;
-}
-
-.enviar {
-    height: 40px;
-    width: 100px;
-    border: 1px solid;
-    color: black;
-    margin-left: 350px;
-    margin-bottom: 20px;
-    background-color:#debe67;
-}
-
-label {
-    margin-left: 250px;
-    color: black;
-    font-weight: bold;
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
     display: inline-block;
-    width: 70px;
-}
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #debe67;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Style the container */
+  .container {
+    border: 2px;
+    border-style: solid;
+    border-color: #debe67;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    background-color: #debe67;
+  }
 
-p {
-    font-family: Verdana,Tahoma,sans-serif;
-    font-size: 10px;
-    color: darkred;
-    margin-left: 250px;
+  .row-img {
+    background-color: #debe67;
+  }
+
+  .row-img:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .img-itau {
+      max-width: 50px;
+      width: auto;
+      float: left;
+      margin: 10px;
+  }
+
+  .img-gama {
+    max-width: 100px;
+    width: auto;
+    float: right;
+    margin: 10px;
 }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

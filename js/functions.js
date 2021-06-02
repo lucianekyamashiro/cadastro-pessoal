@@ -15,6 +15,9 @@ function Enviar() {
     }
 }
 
+/*
+    Funções de validação e máscara retiradas do link https://gist.github.com/ricardodantas/6031749.
+*/
 function ValidarCPF(obj) {	
     var cpf = obj.value;
 	cpf = cpf.replace(/[^\d]+/g,'');	
