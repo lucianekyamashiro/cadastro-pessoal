@@ -60,6 +60,8 @@ function pesquisacep(valor) {
             //cep é inválido.
             limpa_formulario_cep();
             alert("Formato de CEP inválido.");
+            document.getElementById("cep").value = "";
+            document.getElementById("cep").focus();
         }
     } //end if.
     else {
