@@ -22,9 +22,11 @@ function ValidarCPF(obj) {
     var cpf = obj.value;
 	cpf = cpf.replace(/[^\d]+/g,'');
 
+    if (cpf == '')
+        return false;
+
 	// Elimina CPFs invalidos conhecidos	
-	if (cpf == '' ||
-        cpf.length != 11 || 
+	 if (cpf.length != 11 || 
 		cpf == "00000000000" || 
 		cpf == "11111111111" || 
 		cpf == "22222222222" || 
